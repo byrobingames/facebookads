@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<palette>
+    
+    <block tag="initFBBanner" spec="Initialize Facebook Banner 'PlaceID': %0 at: %1 as: %2 [c:facebook]" code="FBAudienceNetwork.initBanner(~,~,~);" type="action" color="cyan" returns="void">
+        <fields>
+            <text order="0"></text>
+            <dropdown order="1">
+				<choices>
+					<c text="Bottom" code="0"></c>
+                    <c text="Top" code="1"></c>
+				</choices>
+			</dropdown>
+			<dropdown order="2">
+				<choices>
+					<c text="Release Mode" code="0"></c>
+					<c text="Test Mode" code="1"></c>
+				</choices>
+			</dropdown>
+        </fields>
+    </block>
+    
+    <block tag="showhideFBBanner" spec=" %0 Facebook banner ad [c:facebook]" code="FBAudienceNetwork.~Banner();" type="action" color="cyan" returns="void">
+        <fields>
+            <dropdown order="0">
+                <choices>
+                    <c text="Show" code="show"></c>
+                    <c text="Hide" code="hide"></c>
+                </choices>
+            </dropdown>
+        </fields>
+    </block>
+	
+	    <block tag="setPositionFBBanner" spec="Move Facebook banner to %0 of the screen [c:facebook]" code="FBAudienceNetwork.setBannerPosition(~);" type="action" color="cyan" returns="void">
+        <fields>
+            <dropdown order="0">
+                <choices>
+                    <c text="Bottom" code="0"></c>
+                    <c text="Top" code="1"></c>
+                </choices>
+            </dropdown>
+        </fields>
+    </block>
+    
+    <block tag="getFBBannerInfo" spec="Facebook banner %0 [c:facebook]" code="FBAudienceNetwork.getBannerInfo(~)" type="normal" color="cyan" returns="boolean">
+        <fields>
+            <dropdown order="0">
+				<choices>
+					<c text="did successfully load" code="0"></c>
+					<c text="did fail to load" code="1"></c>
+                    <c text="was opened" code="2"></c>
+                    <c text="did click" code="3"></c>
+                    <c text="was clicked" code="4"></c>
+				</choices>
+			</dropdown>
+        </fields>
+    </block>
+    
+    
+    <block tag="initFBMediumRect" spec="Initialize Facebook Medium Rect. banner 'PlaceID': %0 at: %1 as: %2 [c:facebook]" code="FBAudienceNetwork.initMediumRect(~,~,~);" type="action" color="cyan" returns="void">
+        <fields>
+            <text order="0"></text>
+            <dropdown order="1">
+                <choices>
+                    <c text="Bottom" code="0"></c>
+                    <c text="Center" code="1"></c>
+                    <c text="Top" code="2"></c>
+                </choices>
+            </dropdown>
+            <dropdown order="2">
+                <choices>
+                    <c text="Release Mode" code="0"></c>
+                    <c text="Test Mode" code="1"></c>
+                </choices>
+            </dropdown>
+        </fields>
+    </block>
+	
+    
+    <block tag="showhideFBMediumRect" spec=" %0 Facebook Medium Rect banner ad [c:facebook]" code="FBAudienceNetwork.~MediumRect();" type="action" color="cyan" returns="void">
+        <fields>
+            <dropdown order="0">
+                <choices>
+                    <c text="Show" code="show"></c>
+                    <c text="Hide" code="hide"></c>
+                </choices>
+            </dropdown>
+        </fields>
+    </block>
+	
+	    <block tag="setPositionFBMediumRect" spec="Move Facebook Medium Rect. banner to %0 of the screen [c:facebook]" code="FBAudienceNetwork.setMediumRectPosition(~);" type="action" color="cyan" returns="void">
+        <fields>
+            <dropdown order="0">
+                <choices>
+                    <c text="Bottom" code="0"></c>
+                    <c text="Center" code="1"></c>
+                    <c text="Top" code="2"></c>
+                </choices>
+            </dropdown>
+        </fields>
+    </block>
+    
+    <block tag="getFBMediumRectInfo" spec="Facebook Medium Rect banner %0 [c:facebook]" code="FBAudienceNetwork.getMediumRectInfo(~)" type="normal" color="cyan" returns="boolean">
+        <fields>
+            <dropdown order="0">
+                <choices>
+                    <c text="did successfully load" code="0"></c>
+                    <c text="did fail to load" code="1"></c>
+                    <c text="was opened" code="2"></c>
+                    <c text="did click" code="3"></c>
+                    <c text="was clicked" code="4"></c>
+                </choices>
+            </dropdown>
+        </fields>
+    </block>
+	
+	<block tag="initFBInterstitial" spec="Initialize Facebook Interstitial ad 'PlaceID': %0 as: %1 [c:facebook]" code="FBAudienceNetwork.initInterstitial(~,~);" type="action" color="cyan" returns="void">
+        <fields>
+            <text order="0"></text>
+            <dropdown order="1">
+                <choices>
+                    <c text="Release Mode" code="0"></c>
+                    <c text="Test Mode" code="1"></c>
+                </choices>
+            </dropdown>
+        </fields>
+    </block>
+	
+	    <block tag="loadShowFBInterstitial" spec=" %0 Facebook Interstitial ad [c:facebook]" code="FBAudienceNetwork.~Interstitial();" type="action" color="cyan" returns="void">
+        <fields>
+            <dropdown order="0">
+                <choices>
+                    <c text="Load" code="load"></c>
+                    <c text="Show" code="show"></c>
+                </choices>
+            </dropdown>
+        </fields>
+    </block>
+	
+	<block tag="getFBInterstitialInfo" spec="Facebook Interstitial %0 [c:facebook]" code="FBAudienceNetwork.getInterstitialInfo(~)" type="normal" color="cyan" returns="boolean">
+        <fields>
+            <dropdown order="0">
+                <choices>
+                    <c text="did successfully load" code="0"></c>
+                    <c text="did fail to load" code="1"></c>
+                    <c text="was opened" code="2"></c>
+                    <c text="did click" code="3"></c>
+                    <c text="was clicked" code="4"></c>
+                </choices>
+            </dropdown>
+        </fields>
+    </block>
+    
+    
+</palette>

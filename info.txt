@@ -1,0 +1,6 @@
+name=Facebook Audience Network (1.6) (byRobin)
+description=Implements Facebook ads for iOS and Android.
+author=Robin Schaafsma
+website=http://www.byrobingames.com
+version=1.6
+compatibility=mobile
