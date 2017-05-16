@@ -12,6 +12,8 @@ import openfl.Lib;
 import openfl.utils.JNI;
 #end
 
+import scripts.ByRobinAssets;
+
 
 class FBAudienceNetwork
 {
@@ -52,12 +54,27 @@ class FBAudienceNetwork
     #end
 
 //-------------Banner ad------------------------------------------
- public static function initBanner(adID:String, position:Int, mode:Int):Void
+ public static function initBanner(position:Int):Void
     {
+		var mode:Int;
+		var adID:String = ByRobinAssets.FBBannerPlacement;
+		if(ByRobinAssets.FBTestAds)
+		{
+			mode = 1;
+		}else{
+			mode = 0;
+		}
+		
 		if(adID == "")
 		{
-			
-			haxe.Log.trace("PlaceID connot be empty");
+			if(mode == 1)
+			{
+				adID = "1537086959841884_1538124856404761"; // test placeID Don't use for Release
+				
+			}else
+			{
+				haxe.Log.trace("PlaceID connot be empty in Release Mode, turn on Test Mode");
+			}
 			
 		}
 	
@@ -234,9 +251,17 @@ class FBAudienceNetwork
     }
 	
 	//-------------MedeumRect banner ad------------------------------------------
-	
-	public static function initMediumRect(adID:String, position:Int, mode:Int):Void
+	public static function initMediumRect(position:Int):Void
     {
+		var mode:Int;
+		var adID:String = ByRobinAssets.FBRectBannerPlacement;
+		if(ByRobinAssets.FBTestAds)
+		{
+			mode = 1;
+		}else{
+			mode = 0;
+		}
+		
 		if(adID == "")
 		{
 			if(mode == 1)
@@ -427,8 +452,16 @@ class FBAudienceNetwork
 	//-------------Interstitial ad------------------------------------------
 	
 	
-	 public static function initInterstitial(adID:String, mode:Int):Void
+	 public static function initInterstitial():Void
     {
+		var mode:Int;
+		var adID:String = ByRobinAssets.FBInterstitialPlacement;
+		if(ByRobinAssets.FBTestAds)
+		{
+			mode = 1;
+		}else{
+			mode = 0;
+		}
 	
 		if(adID == "")
 		{

@@ -62,10 +62,35 @@ typedef NS_ENUM(NSInteger, FBMediaViewRenderingMethod) {
 };
 
 /**
+ Test Ad type to be injected when test mode is on
+ */
+typedef NS_ENUM(NSInteger, FBAdTestAdType) {
+    // No specific ad type to be set.
+    // This will return a random ad type when test mode is on.
+    FBAdTestAdType_Default,
+    // 16x9 image ad with app install CTA option
+    FBAdTestAdType_Img_16_9_App_Install,
+    // 16x9 image ad with link CTA option
+    FBAdTestAdType_Img_16_9_Link,
+    // nHD video 46 sec ad with app install CTA option
+    FBAdTestAdType_Vid_nHD_46s_App_Install,
+    // nHD video 46 sec ad with link CTA option
+    FBAdTestAdType_Vid_nHD_46s_Link,
+    // carousel ad with square image and app install CTA option
+    FBAdTestAdType_Carousel_Img_Square_App_Install,
+    // carousel ad with square image and link CTA option
+    FBAdTestAdType_Carousel_Img_Square_Link
+};
+
+/**
   AdSettings contains global settings for all ad controls.
  */
 FB_CLASS_EXPORT FB_SUBCLASSING_RESTRICTED
 @interface FBAdSettings : NSObject
+
+// When test mode is on, setting a non default value for testAdType will
+// request the specified type of ad.
+@property (class, nonatomic, assign) FBAdTestAdType testAdType;
 
 /**
   Returns test mode on/off.

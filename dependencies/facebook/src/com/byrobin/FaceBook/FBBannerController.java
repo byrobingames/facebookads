@@ -23,7 +23,7 @@ import java.util.UUID;
 
 import com.facebook.ads.*;
 //import com.facebook.ads.a.ag;
-import com.facebook.ads.internal.util.t;
+import com.facebook.ads.internal.util.*;
 
 public class FBBannerController extends Extension
 {
@@ -48,7 +48,7 @@ public class FBBannerController extends Extension
         deviceIdHash = var1.getString("deviceIdHash", (String)null);
         //if(s.a(deviceIdHash)) {
         if(deviceIdHash == null || deviceIdHash.length() <= 0){
-            deviceIdHash = t.b(UUID.randomUUID().toString());
+            deviceIdHash = s.b(UUID.randomUUID().toString());
             var1.edit().putString("deviceIdHash", deviceIdHash).apply();
             
         }
@@ -105,6 +105,11 @@ public class FBBannerController extends Extension
 
                     adLoaded = true;
                     adFailedToLoad = false;
+                }
+                
+                @Override
+                public void onLoggingImpression(Ad ad) {
+                    //nothing to do
                 }
 
                 @Override

@@ -1,19 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <palette>
     
-    <block tag="initFBBanner" spec="Initialize Facebook Banner 'PlaceID': %0 at: %1 as: %2 [c:facebook]" code="FBAudienceNetwork.initBanner(~,~,~);" type="action" color="cyan" returns="void">
+    <block tag="initFBBanner" spec="Initialize Facebook Banner at: %0 [c:facebook]" code="FBAudienceNetwork.initBanner(~);" type="action" color="cyan" returns="void">
         <fields>
-            <text order="0"></text>
-            <dropdown order="1">
+            <dropdown order="0">
 				<choices>
 					<c text="Bottom" code="0"></c>
                     <c text="Top" code="1"></c>
-				</choices>
-			</dropdown>
-			<dropdown order="2">
-				<choices>
-					<c text="Release Mode" code="0"></c>
-					<c text="Test Mode" code="1"></c>
 				</choices>
 			</dropdown>
         </fields>
@@ -56,20 +49,13 @@
     </block>
     
     
-    <block tag="initFBMediumRect" spec="Initialize Facebook Medium Rect. banner 'PlaceID': %0 at: %1 as: %2 [c:facebook]" code="FBAudienceNetwork.initMediumRect(~,~,~);" type="action" color="cyan" returns="void">
+    <block tag="initFBMediumRect" spec="Initialize Facebook Medium Rect. banner at: %0 [c:facebook]" code="FBAudienceNetwork.initMediumRect(~);" type="action" color="cyan" returns="void">
         <fields>
-            <text order="0"></text>
-            <dropdown order="1">
+            <dropdown order="0">
                 <choices>
                     <c text="Bottom" code="0"></c>
                     <c text="Center" code="1"></c>
                     <c text="Top" code="2"></c>
-                </choices>
-            </dropdown>
-            <dropdown order="2">
-                <choices>
-                    <c text="Release Mode" code="0"></c>
-                    <c text="Test Mode" code="1"></c>
                 </choices>
             </dropdown>
         </fields>
@@ -113,15 +99,8 @@
         </fields>
     </block>
 	
-	<block tag="initFBInterstitial" spec="Initialize Facebook Interstitial ad 'PlaceID': %0 as: %1 [c:facebook]" code="FBAudienceNetwork.initInterstitial(~,~);" type="action" color="cyan" returns="void">
+	<block tag="initFBInterstitial" spec="Initialize Facebook Interstitial [c:facebook]" code="FBAudienceNetwork.initInterstitial();" type="action" color="cyan" returns="void">
         <fields>
-            <text order="0"></text>
-            <dropdown order="1">
-                <choices>
-                    <c text="Release Mode" code="0"></c>
-                    <c text="Test Mode" code="1"></c>
-                </choices>
-            </dropdown>
         </fields>
     </block>
 	
