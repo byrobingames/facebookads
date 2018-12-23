@@ -67,6 +67,8 @@ Once you have the placement ID, follow our iOS and Android specific guides to ad
 
 Create different placement ID for Banner, Medium Rect and Interstial Ad.
 
+If your Testing don't forget to enbale Testads. When you are ready to publish, disable Testads.
+
 1-     Initialize in first scene. (example in load scene)<br/>
 ![facebookadsinitialize.png](https://byrobingames.github.io/img/facebookads/facebookadsinitialize.png)
 
